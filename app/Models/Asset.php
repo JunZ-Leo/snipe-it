@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Events\CheckoutableCheckedOut;
@@ -123,7 +122,12 @@ class Asset extends Depreciable
         'requestable'       => ['nullable', 'boolean'],
         'assigned_user'     => ['nullable', 'exists:users,id,deleted_at,NULL'],
         'assigned_location' => ['nullable', 'exists:locations,id,deleted_at,NULL'],
-        'assigned_asset'    => ['nullable', 'exists:assets,id,deleted_at,NULL']
+        'assigned_asset'    => ['nullable', 'exists:assets,id,deleted_at,NULL'],
+        // 新增字段验证规则
+        'bu' => ['nullable', 'string', 'max:255'],
+        'project_group' => ['nullable', 'string', 'max:255'],
+        'report_to_manager' => ['nullable', 'string', 'max:255'],
+        'serial_number' => ['nullable', 'string', 'max:255', 'unique_undeleted:assets,serial_number'],
     ];
 
 
@@ -161,6 +165,11 @@ class Asset extends Depreciable
         'asset_eol_date',
         'last_checkin',
         'last_checkout',
+        // 新增字段
+        'bu',
+        'project_group',
+        'report_to_manager',
+        'serial_number',
     ];
 
     use Searchable;
@@ -186,6 +195,11 @@ class Asset extends Depreciable
       'last_checkin',
       'last_checkout',
       'asset_eol_date',
+      // 新增字段
+        'bu',
+        'project_group',
+        'report_to_manager',
+        'serial_number',
     ];
 
     /**

@@ -508,6 +508,54 @@
                                         </div>
                                     @endif
 
+                                    <!-- 新增字段：BU -->
+                                    @if ($asset->bu)
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <strong>BU</strong>
+                                            </div>
+                                            <div class="col-md-9">
+                                                {{ $asset->bu }}
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    <!-- 新增字段：项目组 -->
+                                    @if ($asset->project_group)
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <strong>项目组</strong>
+                                            </div>
+                                            <div class="col-md-9">
+                                                {{ $asset->project_group }}
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    <!-- 新增字段：Report to Manager -->
+                                    @if ($asset->report_to_manager)
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <strong>Report to Manager</strong>
+                                            </div>
+                                            <div class="col-md-9">
+                                                {{ $asset->report_to_manager }}
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    <!-- 新增字段：设备序列号 -->
+                                    @if ($asset->serial_number)
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <strong>设备序列号</strong>
+                                            </div>
+                                            <div class="col-md-9">
+                                                {{ $asset->serial_number }}
+                                            </div>
+                                        </div>
+                                    @endif
+
                                     @if ($asset->last_checkout!='')
                                         <div class="row">
                                             <div class="col-md-3">

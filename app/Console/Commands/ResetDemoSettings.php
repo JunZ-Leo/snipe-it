@@ -44,7 +44,7 @@ class ResetDemoSettings extends Command
         $this->info('Resetting the demo settings.');
         $settings = Setting::first();
         $settings->per_page = 20;
-        $settings->site_name = 'Snipe-IT Asset Management Demo';
+        $settings->site_name = 'Beyondsoft Asset Management Demo';
         $settings->auto_increment_assets = 1;
         $settings->logo = 'snipe-logo.png';
         $settings->alert_email = 'service@snipe-it.io';

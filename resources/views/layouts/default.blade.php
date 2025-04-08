@@ -915,11 +915,11 @@ dir="{{ Helper::determineLanguageDirection() }}">
                 </section>
 
             </div><!-- /.content-wrapper -->
-            <footer class="main-footer hidden-print" style="display:grid;flex-direction:column;">
+            <!-- <footer class="main-footer hidden-print" style="display:grid;flex-direction:column;">
 
                 <div class="1hidden-xs pull-left">
                     <div class="pull-left" >
-                        <a target="_blank" href="https://snipeitapp.com" rel="noopener">Snipe-IT</a> is open source software, made with <x-icon type="heart" style="color: #a94442; font-size: 10px" />
+                        <a target="_blank" href="beyondsoft.com" rel="noopener">Snipe-IT</a> is open source software, made with <x-icon type="heart" style="color: #a94442; font-size: 10px" />
                             <span class="sr-only">love</span> by <a href="https://bsky.app/profile/snipeitapp.com" rel="noopener">@snipeitapp</a>.
                     </div>
                     <div class="pull-right">
@@ -953,7 +953,7 @@ dir="{{ Helper::determineLanguageDirection() }}">
                         </div>
                     @endif
                 </div>
-            </footer>
+            </footer> -->
         </div><!-- ./wrapper -->
 
 

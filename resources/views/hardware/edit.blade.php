@@ -158,6 +158,43 @@
 
         </div>
 
+        <!-- 新增字段：BU -->
+    <div class="form-group {{ $errors->has('bu') ? ' has-error' : '' }}">
+        <label for="bu" class="col-md-3 control-label">BU</label>
+        <div class="col-md-7">
+            <input class="form-control" type="text" name="bu" id="bu" value="{{ old('bu', $item->bu) }}">
+            {!! $errors->first('bu', '<span class="alert-msg"><i class="fas fa-times"></i> :message</span>') !!}
+        </div>
+    </div>
+
+    <!-- 新增字段：项目组 -->
+    <div class="form-group {{ $errors->has('project_group') ? ' has-error' : '' }}">
+        <label for="project_group" class="col-md-3 control-label">项目组</label>
+        <div class="col-md-7">
+            <input class="form-control" type="text" name="project_group" id="project_group" value="{{ old('project_group', $item->project_group) }}">
+            {!! $errors->first('project_group', '<span class="alert-msg"><i class="fas fa-times"></i> :message</span>') !!}
+        </div>
+    </div>
+
+    <!-- 新增字段：Report to Manager -->
+    <div class="form-group {{ $errors->has('report_to_manager') ? ' has-error' : '' }}">
+        <label for="report_to_manager" class="col-md-3 control-label">Report to Manager</label>
+        <div class="col-md-7">
+            <input class="form-control" type="text" name="report_to_manager" id="report_to_manager" value="{{ old('report_to_manager', $item->report_to_manager) }}">
+            {!! $errors->first('report_to_manager', '<span class="alert-msg"><i class="fas fa-times"></i> :message</span>') !!}
+        </div>
+    </div>
+
+    <!-- 新增字段：设备序列号 -->
+    <div class="form-group {{ $errors->has('serial_number') ? ' has-error' : '' }}">
+        <label for="serial_number" class="col-md-3 control-label">设备序列号</label>
+        <div class="col-md-7">
+            <input class="form-control" type="text" name="serial_number" id="serial_number" value="{{ old('serial_number', $item->serial_number) }}">
+            {!! $errors->first('serial_number', '<span class="alert-msg"><i class="fas fa-times"></i> :message</span>') !!}
+        </div>
+    </div>
+</div>
+
         <div id='order_details' class="col-md-12" style="display:none">
             <br>
             @include ('partials.forms.edit.order_number')

@@ -146,6 +146,11 @@ class AssetsController extends Controller
             $asset->requestable             = request('requestable', 0);
             $asset->rtd_location_id         = request('rtd_location_id', null);
             $asset->byod                    = request('byod', 0);
+            // 新增字段
+            $asset->bu = $request->input('bu');
+            $asset->project_group = $request->input('project_group');
+            $asset->report_to_manager = $request->input('report_to_manager');
+            $asset->serial_number = $request->input('serial_number');
 
             if (! empty($settings->audit_interval)) {
                 $asset->next_audit_date = Carbon::now()->addMonths($settings->audit_interval)->toDateString();
@@ -337,6 +342,11 @@ class AssetsController extends Controller
         $asset->requestable = $request->input('requestable', 0);
         $asset->rtd_location_id = $request->input('rtd_location_id', null);
         $asset->byod = $request->input('byod', 0);
+        // 新增字段
+        $asset->bu = $request->input('bu');
+        $asset->project_group = $request->input('project_group');
+        $asset->report_to_manager = $request->input('report_to_manager');
+        $asset->serial_number = $request->input('serial_number');
 
         $status = Statuslabel::find($request->input('status_id'));
 
